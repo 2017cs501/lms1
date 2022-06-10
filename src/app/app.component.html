@@ -1,0 +1,13 @@
+<body>
+  <!-- <h2>Hello World {{title}}</h2>
+  <h3>Name is : {{name}},{{count}}</h3>
+  <h4 style="color: red;">{{getData()}}</h4>
+  <app-login></app-login>
+  <app-siguup></app-siguup>
+  <app-logincomponent></app-logincomponent> -->
+  <!-- <h1>Parent Data is {{data}}</h1>
+  <app-to-do-list [data]="data"></app-to-do-list> -->
+  <div *ngFor="let item of userDetails">
+    <app-user-detail [userDetails]="item"></app-user-detail>
+  </div>
+</body>

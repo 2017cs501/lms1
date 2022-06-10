@@ -1,0 +1,28 @@
+<p>logincomponent works!</p>
+<button (click)="getData('Afzaal Javaid')">Get Data</button>
+<input type="text" #name placeholder="Enter name" name="name" [value]=counterData/>
+<button (click)="getInputData(name.name)">Get Input Data</button>
+<p>Input Box Data Is : {{inputData}}</p>
+<h1>Counter Program</h1>
+<h3>Data is : {{counterData}}</h3>
+<button (click)="Increment()">++</button>
+<button (click)="Decrement()">--</button>
+<h1 *ngIf="counterData==0;then IfBlock else elseBlock"></h1>
+
+<ng-template #IfBlock>
+<h1>If Block</h1>
+</ng-template>
+
+<ng-template #elseBlock>
+<h1>Else Block</h1>
+</ng-template>
+<h3 *ngFor="let data of userData">
+    {{data.name}}{{data.fname}}
+</h3>
+
+<form #login="ngForm" (ngSubmit)="onFormSubmit(login.value)"> 
+    <input type="text" name="username" placeholder="username" ngModel> 
+    <br/> 
+    <br/> 
+    <input type="submit" value="submit"> 
+ </form>

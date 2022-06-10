@@ -1,0 +1,13 @@
+<p>to-do-list works!</p>
+
+<input type="text" #item placeholder="Enter To Do List Name"/>
+
+<button (click)="addData(item.value)">Add to list</button>
+
+<h2 *ngFor="let item of toDoListData">
+    <h3>{{item.name}}</h3>
+    <button (click)="removeItem(item.id)">Remove</button>
+</h2>
+<mat-slider min="1" max="100" step="1" value="50"></mat-slider>
+{{data}}
+<button (click)="changeData()">Change Parent Data</button>
